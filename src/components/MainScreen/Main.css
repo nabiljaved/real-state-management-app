@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,900');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+.main-nav{
+    height: 70px;
+    width: 100%;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.toggle-button {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+  }
+  
+  .toggle-button:focus {
+    outline: none;
+  }
+  
+  .toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.6rem 0;
+  }
+
+  .login_status{
+    order: 2;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-nav__item_first{
+    display: none !important;
+}
+
+.main-nav__item_second{
+    display: none !important;
+}
+
+  
+  .main-header__brand {
+    color: #0e4f1f;
+    text-decoration: none;
+    font-weight: bold;
+    /* width: 20px; */
+  }
+  
+  .main-header__brand img {
+    margin-right: 10px;
+    width: 5rem;
+    vertical-align: middle;
+    border-radius: 5px;
+    
+    /* width: 100%; */
+  }
+
+.main-nav__items {
+    order: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  .main-nav__item {
+    margin: 0 1rem;
+  }
+  
+  .main-nav__item a,
+  .mobile-nav__item a {
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    padding: 0.2rem 0;
+  }
+  
+  .main-nav__item a:hover,
+  .main-nav__item a:active {
+    color: black;
+    border-bottom: 2px solid grey;
+  }
+  
+  .main-nav__item--cta a,
+  .mobile-nav__item--cta a {
+    color: white;
+    background: #ff1b68;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+  }
+  
+  .main-nav__item--cta a:hover,
+  .main-nav__item--cta a:active,
+  .mobile-nav__item--cta a:hover,
+  .mobile-nav__item--cta a:active {
+    color: white;
+    background: tomato;
+    border: none;
+  }
+
+.main_container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+  
+}
+
+.main_heading{
+    width: 100%;
+    text-align: center;
+    color:darkcyan;
+    margin-bottom: 50px;
+}
+
+
+.option_container{
+    width: 100%;
+    max-width: 800px ;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.options{
+    width: 30%;
+    height: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.option_backdrop{
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.options h1{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat", sans-serif;
+}
+
+.option1{
+    background-image: url("https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iW006gRYTtsw/v1/1200x-1.jpg");
+}
+
+
+.option2{
+    background-image: url("https://www.stalawfirm.com/public/uploads/ckfinder/images/long-short-contracts-min.jpg");
+}
+
+
+.option3{
+    background-image: url("https://stwewebportalcms001.blob.core.windows.net/strapi-uploads/assets/lento_landlord_woman_enjoying_coffee_9c22265771.jpg");
+}
+
+.options:hover{
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    transform: scale(1.05);
+}
+
+/*mobile nav*/
+
+
+.mobile-nav {
+  display: block;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 70%;
+  height: 100vh;
+  transition: "all .2s";
+  transition-timing-function: ease-in;
+  box-shadow: 1px 0px 14px 1px rgba(204,67,67,0.75);
+  -webkit-box-shadow: 1px 0px 14px 1px rgba(204,67,67,0.75);
+  -moz-box-shadow: 1px 0px 14px 1px rgba(204,67,67,0.75);
+}
+
+.mobile-nav__items {
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav__item {
+  margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+  font-size: 1.5rem;
+}
+
+.mobile-nav_topbar{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 0px 5px 1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px 0px 5px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 0px 5px 1px rgba(0,0,0,0.75);
+  justify-content: space-between;
+}
+
+.mobile-nav_topbar_list1{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mobile-nav_topbar_list2{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.login_status > li{
+  margin-right: 3px;
+  font-style: bold;
+  font-size: 20px;
+  color: black;
+}
+
+.mobile-nav_topbar_list2 > li{
+  /* marginRight:'10px', fontStyle:'bold', fontSize:'20px' */
+  margin-right: 3px;
+  font-style: bold;
+  font-size: 20px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .option_container {
+      flex-direction: column;
+      height: 100%;
+      align-items: center;
+      
+    }
+
+    .options ,
+    .options .option1{
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        margin: 5px;
+    }
+    .option_backdrop{
+        border-radius: 0px;
+    }
+
+    .main_heading{
+        color: blueviolet;
+        width: 100%;
+        width: 100%;
+        text-align: center;
+        color:darkcyan;
+        margin-bottom: 50px;
+    }
+
+    body{
+        overflow: scroll;
+    }
+
+    .main_heading{
+        display: none;
+    }
+
+    .main-nav__item_first{
+        display: block !important;
+        cursor: pointer;
+    }
+
+    .main-nav__item{
+        display: none;
+    }
+
+    .main-nav__item_second{
+        display: block !important;
+        margin-top: 20px;
+    }
+
+    .login_status{
+        display: none;
+    }
+
+
+  }
+
+
+
